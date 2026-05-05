@@ -1,0 +1,14 @@
+models/
+__pycache__/
+*.pt
+*.pyc
+.ipynb_checkpoints/
+data/
+*.csv
+*.xlsx
+*.parquet
+*.bin
+*.safetensors
+.env
+huggingface_cache/
+*.log
