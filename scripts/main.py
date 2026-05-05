@@ -92,6 +92,32 @@ def scan(query: Query):
         
     text = query.text
     
+    # ── WHITELIST: Common safe phrases — never block these ──
+    safe_phrases = ["hi", "hello", "thanks", "thank you", "ok", "okay", 
+                    "yes", "no", "help", "good morning", "good evening",
+                    "good night", "bye", "goodbye", "please", "sure",
+                    "hey", "howdy", "welcome", "cheers", "noted"]
+    if text.strip().lower() in safe_phrases:
+        return {
+            "verdict": "SAFE",
+            "score": 0.0,
+            "triggered_at": "WHITELIST",
+            "reason": "Common safe phrase",
+            "severity": "NONE",
+            "details": {"spine_score": 0.0, "brain_score": 0.0}
+        }
+    
+    # ── WHITELIST: Short messages (<20 chars) — skip scanning ──
+    if len(text.strip()) < 20:
+        return {
+            "verdict": "SAFE",
+            "score": 0.0,
+            "triggered_at": "WHITELIST",
+            "reason": "Message too short to be an injection attack",
+            "severity": "NONE",
+            "details": {"spine_score": 0.0, "brain_score": 0.0}
+        }
+    
     # 1. Run through SPINE
     spine_inputs = models["spine_tokenizer"](text, return_tensors="pt", truncation=True, padding=True).to(device)
     with torch.no_grad():
@@ -134,8 +160,8 @@ def scan(query: Query):
         spine_score_val = spine_probs[0, 1].item() if spine_probs.shape[-1] > 1 else 0
         brain_score_val = brain_probs[0, 1].item() if brain_probs.shape[-1] > 1 else 0
         
-        # Override Judge if ANY base model is moderately confident (score > 0.6)
-        if spine_score_val > 0.6 or brain_score_val > 0.6:
+        # Override Judge only if SPINE is very confident (>0.97) or BRAIN is confident (>0.88)
+        if spine_score_val > 0.97 or brain_score_val > 0.88:
             is_injection = True
             injection_score = max(injection_score, spine_score_val, brain_score_val)
         else:

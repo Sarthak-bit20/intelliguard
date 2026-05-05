@@ -1,0 +1,124 @@
+===============================================
+    INTELLIGUARD CORP — EMPLOYEE HANDBOOK
+              Effective: January 1, 2025
+              Version: 5.0 | Internal Use
+===============================================
+
+SECTION 1: CODE OF CONDUCT
+----------------------------
+
+1.1 Professional Behavior
+All employees are expected to maintain the highest standards of professional conduct.
+Treat all colleagues, clients, and partners with respect, dignity, and courtesy.
+Discrimination, harassment, bullying, or intimidation of any kind will not be tolerated.
+This includes but is not limited to discrimination based on race, gender, age, religion, sexual orientation, disability, or national origin.
+
+1.2 Workplace Harassment Policy
+IntelliGuard Corp maintains a zero-tolerance policy for workplace harassment.
+Harassment includes: unwelcome verbal or physical conduct, sexual harassment, hostile work environment creation, and cyberbullying.
+Employees experiencing or witnessing harassment must report it immediately to HR or use the anonymous Ethics Hotline.
+All complaints are investigated promptly and confidentially. Substantiated claims result in disciplinary action up to and including termination.
+
+1.3 Conflict of Interest
+Employees must disclose any personal, financial, or family relationships that may create a conflict of interest.
+Outside employment or consulting work must be disclosed to and approved by the employee's VP.
+Employees may not use company resources, proprietary information, or their position for personal gain.
+Gifts or entertainment from vendors/clients exceeding $50 in value must be reported to the Compliance team.
+
+1.4 Confidentiality
+Employees are bound by the Non-Disclosure Agreement (NDA) signed at the time of hiring.
+Company proprietary information, trade secrets, and client data must not be disclosed to unauthorized parties.
+This obligation continues after the termination of employment.
+Social media posts about company business require prior approval from the Communications team.
+
+1.5 Substance Abuse Policy
+The use, possession, or distribution of illegal substances on company premises is prohibited.
+Alcohol consumption is permitted only at company-sanctioned events and must be moderate.
+Employees suspected of impairment during work hours may be subject to testing and disciplinary action.
+The company offers a confidential Employee Assistance Program (EAP) for substance abuse support.
+
+
+SECTION 2: EMPLOYEE BENEFITS
+------------------------------
+
+2.1 Health Insurance
+The company provides comprehensive health insurance for all full-time employees and their dependents.
+Coverage includes: medical, dental, and vision.
+Plans offered: PPO (Premium), HMO (Standard), and HDHP with HSA (High Deductible).
+The company covers 85% of the premium for individual coverage and 70% for family coverage.
+Open enrollment period: November 1–30 each year. Life event changes (marriage, birth) allow mid-year enrollment.
+
+2.2 Retirement Benefits (401k)
+Employees are eligible to participate in the company 401(k) plan from their first day of employment.
+The company matches 100% of employee contributions up to 6% of their base salary.
+Vesting schedule: Immediate vesting for employee contributions; company match vests over 3 years (33% per year).
+Employees may choose from a range of investment options including index funds, target-date funds, and bond funds.
+
+2.3 Life and Disability Insurance
+Basic life insurance: 2x annual salary, fully paid by the company.
+Supplemental life insurance: Available at group rates, up to 5x annual salary.
+Short-term disability: 60% of base salary for up to 26 weeks.
+Long-term disability: 50% of base salary after 26 weeks, for the duration of the disability or until age 65.
+
+2.4 Employee Stock Purchase Plan (ESPP)
+Eligible employees may purchase company stock at a 15% discount through payroll deductions.
+Enrollment periods: January and July of each year.
+Maximum contribution: 15% of base salary or $25,000 per year (whichever is less).
+Holding period: Shares must be held for 1 year after purchase for favorable tax treatment.
+
+2.5 Professional Development
+The company provides an annual learning and development budget of $3,000 per employee.
+Approved expenses include: conferences, online courses, certifications, books, and training programs.
+Tuition reimbursement: Up to $10,000 per year for degree programs related to the employee's role.
+Employees must maintain a grade of B or equivalent to receive tuition reimbursement.
+
+2.6 Wellness Program
+Annual gym membership reimbursement: Up to $600 per year.
+Mental health support: 12 free counseling sessions per year through the EAP.
+Wellness days: 2 additional paid days off per year for wellness activities.
+On-site amenities: Meditation rooms, standing desks, and healthy snack stations at all office locations.
+
+2.7 Other Benefits
+Commuter benefits: Pre-tax transit and parking deductions up to IRS limits.
+Employee referral bonus: $5,000 for successful referral hires (paid after 90-day probation).
+Parental support: Subsidized backup childcare (up to 20 days/year) and on-site lactation rooms.
+Volunteer time off: 2 paid days per year for community service activities.
+
+
+SECTION 3: OFFICE HOURS AND ATTENDANCE
+----------------------------------------
+
+3.1 Standard Work Hours
+Standard work hours are 9:00 AM to 6:00 PM, Monday through Friday, with a 1-hour lunch break.
+Core hours (mandatory availability): 10:00 AM to 4:00 PM in the employee's local time zone.
+Flexible scheduling is available — employees may adjust start/end times with manager approval.
+Total expected weekly hours: 40 hours for full-time employees.
+
+3.2 Overtime
+Non-exempt employees are eligible for overtime pay at 1.5x their regular hourly rate for hours exceeding 40 per week.
+Overtime must be pre-approved by the employee's manager.
+Exempt employees are not eligible for overtime but may receive compensatory time off at the manager's discretion.
+Consistently working excessive hours (50+ per week) will trigger a workload review by HR.
+
+3.3 Time Tracking
+All employees must log their work hours in the Time Tracking system (Workday) on a daily basis.
+Entries must be submitted by end of day Friday each week.
+Failure to submit timesheets for 2 consecutive weeks may result in a payroll hold.
+Managers are responsible for reviewing and approving team timesheets by Monday noon.
+
+3.4 Attendance and Punctuality
+Regular attendance and punctuality are essential for team collaboration and productivity.
+Employees who will be late or absent must notify their manager before 9:30 AM.
+Chronic tardiness (more than 3 instances per month) will be addressed through the progressive discipline process.
+Unexcused absences of 3 or more consecutive days without notification may be treated as voluntary resignation.
+
+3.5 Breaks
+Employees are entitled to two 15-minute paid breaks per day in addition to their lunch break.
+Break times should be coordinated with team members to ensure adequate coverage.
+Smoking breaks must be taken in designated outdoor areas only.
+
+3.6 Remote Work Transition
+Employees transitioning between office and remote work must update their work location in Workday.
+Equipment pickup/return must be coordinated with the IT department at least 3 business days in advance.
+All remote work arrangements are subject to the WFH policy outlined in the HR Policy Manual.
+International remote work requires Legal and Tax team approval due to jurisdictional implications.

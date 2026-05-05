@@ -1,0 +1,109 @@
+===============================================
+       INTELLIGUARD CORP — HR POLICY MANUAL
+              Effective: January 1, 2025
+              Version: 4.2 | Confidential
+===============================================
+
+SECTION 1: LEAVE POLICY
+------------------------
+
+1.1 Annual Leave (Paid Time Off)
+All full-time employees are entitled to 24 days of paid annual leave per calendar year.
+Leave accrues at a rate of 2 days per month starting from the date of joining.
+Unused leave can be carried forward up to a maximum of 10 days into the next calendar year.
+Any leave beyond the carry-forward limit will lapse on December 31st without compensation.
+
+1.2 Sick Leave
+Employees are entitled to 12 days of paid sick leave per year.
+Sick leave exceeding 3 consecutive days requires a medical certificate from a licensed physician.
+Chronic illness accommodations can be requested through HR with supporting medical documentation.
+Mental health days are included under sick leave — employees are encouraged to use them without stigma.
+
+1.3 Maternity and Paternity Leave
+Maternity leave: 26 weeks of fully paid leave for the first two children; 12 weeks for subsequent children.
+Paternity leave: 4 weeks of fully paid leave, to be taken within 6 months of the child's birth or adoption.
+Adoption leave follows the same structure as maternity/paternity leave.
+Surrogacy leave: Commissioning parents are eligible for 12 weeks of paid leave.
+
+1.4 Bereavement Leave
+Employees are entitled to 5 days of paid bereavement leave for the death of an immediate family member.
+Immediate family includes: spouse, children, parents, siblings, grandparents, and in-laws.
+Additional unpaid leave of up to 5 days may be granted at the manager's discretion.
+
+1.5 Public Holidays
+The company observes 12 public holidays per year as per the regional holiday calendar.
+Employees required to work on public holidays will receive compensatory time off or 2x pay.
+
+1.6 Leave Application Process
+All leave requests must be submitted through the HR Portal at least 5 business days in advance.
+Emergency leave can be communicated via email or phone to the immediate supervisor.
+Leave approval is at the discretion of the reporting manager, considering team workload.
+Unapproved absence for more than 3 consecutive days may result in disciplinary action.
+
+
+SECTION 2: WORK FROM HOME (WFH) POLICY
+----------------------------------------
+
+2.1 Eligibility
+All employees who have completed their probationary period (90 days) are eligible for WFH.
+Certain roles requiring physical presence (e.g., facilities, lab technicians) are exempt.
+New hires must work from the office for the first 90 days unless otherwise approved by their VP.
+
+2.2 WFH Schedule
+Employees may work from home up to 3 days per week under the hybrid model.
+Core collaboration days are Tuesday and Thursday — all employees must be in-office on these days.
+Fully remote arrangements require VP-level approval and must be reviewed quarterly.
+
+2.3 WFH Requirements
+Employees must maintain a stable internet connection with minimum 25 Mbps download speed.
+A dedicated, quiet workspace is required — working from cafes or public spaces is discouraged for security reasons.
+Company-issued equipment (laptop, headset, monitor) must be used for all work activities.
+Employees must be available during core hours: 10:00 AM to 4:00 PM in their local time zone.
+
+2.4 WFH Communication
+Employees must update their status on Slack/Teams during work hours.
+Video must be enabled for all scheduled meetings unless bandwidth constraints exist.
+Response time for messages during core hours should not exceed 30 minutes.
+
+2.5 WFH Expense Reimbursement
+Employees on fully remote arrangements receive a monthly stipend of $150 for internet and utilities.
+One-time ergonomic setup allowance of $500 is available for home office equipment.
+Receipts must be submitted through the expense portal within 30 days of purchase.
+
+
+SECTION 3: PERFORMANCE REVIEW PROCESS
+---------------------------------------
+
+3.1 Review Cycle
+Performance reviews are conducted semi-annually: Mid-Year (July) and Year-End (January).
+The review process includes self-assessment, peer feedback (360-degree), and manager evaluation.
+Calibration sessions are held at the department level to ensure fair and consistent ratings.
+
+3.2 Rating Scale
+Ratings follow a 5-point scale:
+  1 — Needs Improvement: Consistently below expectations; requires a Performance Improvement Plan (PIP).
+  2 — Partially Meets Expectations: Some areas need development; specific goals will be set.
+  3 — Meets Expectations: Solid, reliable performance; meets all role requirements.
+  4 — Exceeds Expectations: Frequently delivers above and beyond; demonstrates leadership qualities.
+  5 — Exceptional: Consistently outstanding; considered for accelerated promotion or special recognition.
+
+3.3 Performance Improvement Plan (PIP)
+Employees rated 1 or 2 for two consecutive cycles will be placed on a 90-day PIP.
+The PIP includes specific, measurable goals, weekly check-ins with the manager, and HR oversight.
+Failure to meet PIP objectives may result in role reassignment, demotion, or termination.
+
+3.4 Promotions and Compensation
+Promotion eligibility requires a minimum rating of 4 in the most recent review cycle.
+Salary adjustments are based on performance rating, market benchmarking, and budget allocation.
+Annual merit increases range from 3% (Meets Expectations) to 15% (Exceptional).
+Stock option grants are available for employees rated 4 or above in senior roles (L5+).
+
+3.5 Continuous Feedback
+Managers are expected to provide ongoing, documented feedback — not just during review cycles.
+Monthly 1:1 meetings are mandatory and should include career development discussions.
+Employees can request ad-hoc feedback sessions at any time through the HR portal.
+
+3.6 Appeals Process
+Employees who disagree with their review rating may file an appeal within 15 business days.
+Appeals are reviewed by the skip-level manager and an HR Business Partner.
+The appeals committee decision is final and binding.

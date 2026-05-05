@@ -1,0 +1,72 @@
+===============================================
+    TECHCORP — FINANCE & EXPENSE POLICY
+         Effective: January 1, 2025
+         Version: 3.4 | Confidential
+===============================================
+
+SECTION 1: EXPENSE CLAIMS
+--------------------------
+
+1.1 Eligible Expenses
+Business-related expenses incurred by employees in the course of their duties are eligible for reimbursement.
+Eligible categories include: business travel, client entertainment, professional development, office supplies, and communication costs.
+Personal expenses, fines, penalties, and non-business entertainment are strictly non-reimbursable.
+
+1.2 Submission Process
+All expense claims must be submitted through the Finance Portal (SAP Concur) within 30 calendar days of the expense date.
+Each claim requires: original receipt or digital copy, expense category, business justification, and project/cost center code.
+Claims submitted after 30 days require VP-level approval and may be subject to delayed processing.
+Incomplete claims will be returned to the employee for correction — resubmission resets the processing timeline.
+
+1.3 Approval Workflow
+Claims under $500: Approved by direct manager.
+Claims $500–$2,000: Approved by department head.
+Claims over $2,000: Requires VP approval and Finance review.
+Claims over $10,000: Requires CFO approval with detailed business case documentation.
+All approvers must process claims within 5 business days of submission.
+
+1.4 Reimbursement Timeline
+Approved claims are reimbursed within 10 business days via direct deposit to the employee's registered bank account.
+International reimbursements may take up to 15 business days due to cross-border processing.
+Employees may not use personal credit cards for purchases exceeding $5,000 — a corporate card or purchase order must be used.
+
+
+SECTION 2: BUDGET APPROVALS
+-----------------------------
+
+2.1 Annual Budget Cycle
+The annual budget planning cycle begins in October and concludes with board approval in December.
+Department heads submit budget proposals using the Budget Template available on the Finance Portal.
+Budget proposals must include: personnel costs, operational expenses, capital expenditures, and contingency (minimum 5%).
+
+2.2 Budget Modification
+Mid-year budget modifications require a Change Request Form with justification and impact analysis.
+Modifications under 10% of departmental budget: Approved by VP.
+Modifications over 10%: Require CFO approval and Finance Committee review.
+Emergency budget allocations can be fast-tracked through the CFO's office with a 48-hour turnaround.
+
+2.3 Cost Center Management
+Every expense must be tagged to a valid cost center and project code.
+Creating new cost centers requires Finance team approval and VP authorization.
+Quarterly cost center reviews are conducted by Finance — inactive cost centers are archived after 6 months.
+
+
+SECTION 3: TRAVEL ALLOWANCES
+------------------------------
+
+3.1 Domestic Travel
+Economy class airfare for flights under 4 hours; premium economy for flights over 4 hours.
+Hotel accommodations: Up to $200/night in standard cities, up to $350/night in high-cost cities (NYC, SF, DC).
+Daily meal allowance: $75 per day (breakfast $15, lunch $25, dinner $35). Receipts required for individual meals over $50.
+Ground transportation: Ride-sharing (Uber/Lyft) or rental car with prior approval. Mileage reimbursement: $0.67/mile for personal vehicle use.
+
+3.2 International Travel
+All international travel requires pre-approval from the VP and the Travel Desk at least 14 days in advance.
+Business class is permitted for flights exceeding 8 hours.
+International per diem rates follow the U.S. Department of State published rates for the destination country.
+Travel insurance is mandatory and provided by the company. Employees must register their trip with Corporate Security.
+
+3.3 Travel Booking
+All bookings must be made through the corporate travel portal (Concur Travel) to ensure policy compliance.
+Direct bookings are only permitted when the corporate portal does not service the destination.
+Loyalty program points earned on business travel belong to the employee but must not influence booking decisions.

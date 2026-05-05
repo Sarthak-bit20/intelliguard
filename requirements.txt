@@ -1,0 +1,21 @@
+# ═══════════════════════════════════════════════
+# IntelliGuard — Full Stack Dependencies
+# ═══════════════════════════════════════════════
+
+# Backend — IntelliGuard API (FastAPI + ML Models)
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+torch>=2.0.0
+transformers>=4.35.0
+pydantic>=2.0.0
+
+# Frontend — RAG Portal (Streamlit + RAG Pipeline)
+streamlit>=1.30.0
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+groq>=0.4.0
+pypdf>=3.17.0
+
+# Shared
+python-dotenv>=1.0.0
+requests>=2.31.0

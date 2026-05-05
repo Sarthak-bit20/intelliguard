@@ -1,0 +1,92 @@
+===============================================
+   TECHCORP — ENGINEERING GUIDELINES
+        Effective: January 1, 2025
+        Version: 2.8 | Internal Use
+===============================================
+
+SECTION 1: CODE REVIEW PROCESS
+--------------------------------
+
+1.1 Pull Request Requirements
+All code changes must go through a Pull Request (PR) before merging into any protected branch.
+PRs must include: a descriptive title, summary of changes, linked JIRA ticket, and testing evidence (screenshots or test results).
+Self-merging is strictly prohibited — at least one approval from a qualified reviewer is required.
+
+1.2 Review SLAs
+PRs with fewer than 200 lines of changed code: Must be reviewed within 4 business hours.
+PRs with 200–500 lines: Must be reviewed within 8 business hours.
+PRs with more than 500 lines: Should be broken into smaller PRs. If unavoidable, reviewed within 24 hours.
+Reviewers must provide actionable, constructive feedback — "LGTM" without review is not acceptable for critical paths.
+
+1.3 Review Checklist
+Reviewers must verify: code correctness, adherence to coding standards, test coverage (minimum 80% for new code), security implications, performance impact, and documentation updates.
+Critical security-related PRs require review from the Security Engineering team in addition to the standard reviewer.
+Database schema changes require DBA review and approval before merging.
+
+
+SECTION 2: DEPLOYMENT PROCEDURES
+-----------------------------------
+
+2.1 Deployment Environments
+Development (dev): For active feature development. Auto-deployed on PR merge to `develop` branch.
+Staging (staging): Pre-production mirror. Deployed weekly on Tuesday mornings. Full regression testing required.
+Production (prod): Live environment. Deployed bi-weekly on Thursday during the maintenance window (2:00–4:00 AM UTC).
+
+2.2 Production Deployment Checklist
+Before any production deployment, the following must be completed:
+  — All automated tests pass (unit, integration, and E2E).
+  — Performance benchmarks show no regression beyond 5% baseline.
+  — Security scan (SAST/DAST) shows zero critical or high vulnerabilities.
+  — Rollback plan documented and tested.
+  — Release notes published in Confluence.
+  — On-call engineer confirmed and available.
+
+2.3 Hotfix Process
+Critical production issues (P0/P1) may bypass the standard release cycle.
+Hotfixes require: Tech Lead approval, expedited code review, and post-deployment verification within 30 minutes.
+All hotfixes must be backported to the `develop` branch within 24 hours.
+
+
+SECTION 3: GIT WORKFLOW
+--------------------------
+
+3.1 Branching Strategy
+We follow a modified GitFlow workflow:
+  — `main`: Production-ready code. Direct commits prohibited.
+  — `develop`: Integration branch for the next release.
+  — `feature/*`: Individual feature branches created from `develop`.
+  — `hotfix/*`: Emergency fixes branched from `main`.
+  — `release/*`: Release stabilization branches.
+
+3.2 Commit Standards
+Use conventional commit messages: `type(scope): description`
+Types: feat, fix, docs, style, refactor, test, chore, perf.
+Example: `feat(auth): add OAuth2 support for SSO login`
+Commits must be atomic — one logical change per commit. Squash merge is the default for feature branches.
+
+3.3 Branch Protection
+`main` and `develop` branches are protected with the following rules:
+  — Minimum 1 approval required.
+  — Status checks must pass (CI/CD pipeline).
+  — Force push is disabled.
+  — Branch must be up-to-date before merging.
+
+
+SECTION 4: ON-CALL ROTATION
+------------------------------
+
+4.1 Schedule
+On-call rotation operates on a weekly cycle, Monday 9:00 AM to following Monday 9:00 AM.
+Each team maintains a primary and secondary on-call engineer.
+On-call schedules are published 4 weeks in advance on PagerDuty.
+
+4.2 Expectations
+Primary on-call must acknowledge alerts within 5 minutes and begin investigation within 15 minutes.
+If the primary does not respond within 10 minutes, the alert escalates to the secondary on-call.
+On-call engineers must have laptop and reliable internet access at all times during their rotation.
+Handoff meetings are conducted every Monday at 9:30 AM to transfer context between rotations.
+
+4.3 Compensation
+On-call engineers receive a weekly stipend of $500 for the on-call week.
+Incident response outside business hours (6 PM–9 AM, weekends) is compensated at 1.5x hourly rate for time actively engaged.
+If an on-call engineer handles more than 3 incidents during off-hours in a single week, they receive a compensatory day off.

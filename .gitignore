@@ -11,4 +11,5 @@ data/
 *.safetensors
 .env
 huggingface_cache/
+chroma_db/
 *.log

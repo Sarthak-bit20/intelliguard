@@ -1,0 +1,86 @@
+===============================================
+     TECHCORP — EMPLOYEE BENEFITS GUIDE
+          Effective: January 1, 2025
+          Version: 5.2 | Internal Use
+===============================================
+
+SECTION 1: HEALTH INSURANCE
+------------------------------
+
+1.1 Medical Coverage
+TechCorp provides comprehensive medical insurance through UnitedHealthcare for all full-time employees and their eligible dependents.
+Three plan tiers are available:
+  — Platinum PPO: $0 deductible, $10 copay for doctor visits, $500 out-of-pocket maximum. Employee contribution: $120/month.
+  — Gold HMO: $250 deductible, $20 copay, $2,000 out-of-pocket maximum. Employee contribution: $60/month.
+  — Silver HDHP+HSA: $1,500 deductible, 20% coinsurance after deductible, $4,000 out-of-pocket maximum. Employee contribution: $25/month. Company contributes $1,000/year to HSA.
+The company covers 85% of the premium for individual coverage and 70% for dependent coverage across all plans.
+Pre-existing conditions are covered from day one with no waiting period.
+
+1.2 Dental and Vision
+Dental insurance (Delta Dental): Covers preventive care at 100%, basic procedures at 80%, and major procedures at 50%. Annual maximum: $2,500.
+Vision insurance (VSP): Covers annual eye exam, $200 frame allowance, and contact lens benefit. Employee contribution: $8/month.
+
+1.3 Open Enrollment
+Open enrollment period: November 1–30 each year. Changes take effect January 1.
+Life events (marriage, birth, adoption, divorce) allow mid-year plan changes within 30 days of the event.
+New employees are enrolled automatically in the Gold HMO plan and may change during their first 30 days.
+
+
+SECTION 2: PROVIDENT FUND / RETIREMENT
+-----------------------------------------
+
+2.1 401(k) Retirement Plan
+All employees are eligible from day one of employment.
+The company matches 100% of contributions up to 4% of base salary, and 50% of contributions from 4%–6%.
+Maximum effective company match: 5% of base salary.
+Vesting schedule: Employee contributions are always 100% vested. Company match vests at 33% per year over 3 years.
+Employees may contribute up to the IRS annual limit ($23,500 for 2025; $31,000 for employees aged 50+).
+Investment options include: S&P 500 index fund, total market fund, bond fund, target-date funds, and a self-directed brokerage window.
+
+2.2 Financial Wellness
+TechCorp provides free access to a financial advisor through Fidelity for retirement planning and investment guidance.
+Quarterly financial wellness webinars cover topics such as tax optimization, estate planning, and debt management.
+Emergency hardship withdrawals from 401(k) are permitted under IRS guidelines with HR approval.
+
+
+SECTION 3: STOCK OPTIONS & EQUITY
+-------------------------------------
+
+3.1 Employee Stock Purchase Plan (ESPP)
+Eligible employees may purchase TechCorp stock at a 15% discount through bi-annual enrollment periods (January and July).
+Maximum contribution: 15% of base salary or $25,000/year (whichever is less).
+Shares are purchased at the end of each 6-month offering period at the lower of the enrollment date or purchase date price, minus 15%.
+
+3.2 Restricted Stock Units (RSUs)
+RSU grants are provided to eligible employees at hire and during annual refresh cycles.
+Standard vesting: 4-year schedule with 25% cliff vesting at year 1 and quarterly vesting thereafter.
+RSU values are based on fair market value at vesting date and are taxed as ordinary income.
+Refresh grants are based on performance rating, level, and retention considerations.
+
+3.3 Stock Option Exercise
+Employees with stock options must exercise within 90 days of termination (voluntary or involuntary).
+Early exercise is permitted for ISO options with an 83(b) election filed within 30 days.
+The Equity Administration team (equity@techcorp.com) provides exercise support and tax guidance.
+
+
+SECTION 4: ANNUAL BONUS
+--------------------------
+
+4.1 Bonus Structure
+Annual bonuses are paid in March for the prior fiscal year's performance.
+Target bonus percentages by level:
+  — Individual Contributor (L1–L3): 5–10% of base salary.
+  — Senior IC / Team Lead (L4–L5): 10–15% of base salary.
+  — Manager / Director (L6–L7): 15–25% of base salary.
+  — VP and above (L8+): 25–40% of base salary.
+
+4.2 Bonus Calculation
+Bonus = Base Salary × Target Bonus % × Individual Performance Multiplier × Company Performance Multiplier.
+Individual Performance Multiplier: Based on annual review rating (0.0x for rating 1, up to 1.5x for rating 5).
+Company Performance Multiplier: Based on company revenue and profitability targets (ranges from 0.5x to 1.25x).
+Employees must be employed on the bonus payment date to be eligible. Pro-rated for employees who joined mid-year.
+
+4.3 Spot Bonuses
+Managers may award spot bonuses of $500–$2,000 for exceptional contributions outside normal responsibilities.
+Spot bonuses require VP approval and are processed through the HR Portal within 2 pay cycles.
+Spot bonuses are limited to 4 per employee per fiscal year.

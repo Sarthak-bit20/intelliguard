@@ -1,0 +1,135 @@
+===============================================
+     INTELLIGUARD CORP — IT SECURITY GUIDELINES
+              Effective: January 1, 2025
+          Version: 3.1 | STRICTLY CONFIDENTIAL
+===============================================
+
+SECTION 1: PASSWORD POLICY
+----------------------------
+
+1.1 Password Requirements
+All passwords must be a minimum of 14 characters in length.
+Passwords must include at least: 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character.
+Passwords must not contain the employee's name, username, employee ID, or any dictionary word.
+Sequential characters (e.g., "abcd", "1234") and repeated characters (e.g., "aaaa") are prohibited.
+
+1.2 Password Rotation
+Passwords must be changed every 90 days for standard accounts.
+Privileged/admin accounts require password rotation every 30 days.
+The system retains the last 12 passwords — reuse of any previous password is blocked.
+Temporary passwords issued by IT must be changed upon first login.
+
+1.3 Multi-Factor Authentication (MFA)
+MFA is mandatory for all employees accessing company systems, including email, VPN, and cloud services.
+Approved MFA methods: hardware security keys (YubiKey), authenticator apps (Google Authenticator, Microsoft Authenticator).
+SMS-based MFA is NOT permitted due to SIM-swapping vulnerabilities.
+MFA bypass requests require CISO approval and are granted only for accessibility accommodations.
+
+1.4 Password Storage
+Employees must use the company-approved password manager (1Password Enterprise) for storing credentials.
+Writing passwords on paper, sticky notes, or storing them in plaintext files is strictly prohibited.
+Sharing passwords via email, Slack, Teams, or any messaging platform is a terminable offense.
+Browser-based password saving is disabled on all company-managed devices via group policy.
+
+1.5 Account Lockout
+Accounts are locked after 5 consecutive failed login attempts.
+Locked accounts can be unlocked by contacting the IT Help Desk or via self-service with MFA verification.
+Repeated lockouts (more than 3 in a 7-day period) will trigger a security review.
+
+
+SECTION 2: DATA HANDLING AND CLASSIFICATION
+---------------------------------------------
+
+2.1 Data Classification Levels
+All company data is classified into four levels:
+  PUBLIC — Information intended for public distribution (e.g., press releases, marketing materials).
+  INTERNAL — General business information for internal use only (e.g., org charts, meeting notes).
+  CONFIDENTIAL — Sensitive business data requiring access controls (e.g., financial reports, strategic plans).
+  RESTRICTED — Highly sensitive data with strict access (e.g., PII, trade secrets, source code, credentials).
+
+2.2 Data Handling by Classification
+
+PUBLIC data:
+- May be shared externally without approval.
+- No encryption required for storage or transmission.
+
+INTERNAL data:
+- Must not be shared externally without manager approval.
+- Should be stored on company-managed systems only.
+- Email transmission within the company is permitted.
+
+CONFIDENTIAL data:
+- Access restricted to authorized personnel on a need-to-know basis.
+- Must be encrypted at rest (AES-256) and in transit (TLS 1.3).
+- External sharing requires VP approval and must use the secure file transfer portal.
+- Printing of confidential documents requires secure printing with badge authentication.
+
+RESTRICTED data:
+- Access requires explicit approval from the Data Owner and the CISO.
+- Must be encrypted at all times with no exceptions.
+- Cannot be stored on personal devices, USB drives, or personal cloud accounts.
+- Data Loss Prevention (DLP) agents monitor all endpoints for unauthorized transfer.
+- Violation of restricted data handling policies is a terminable offense and may result in legal action.
+
+2.3 Data Retention
+Company data must be retained according to the Data Retention Schedule maintained by Legal.
+Customer PII: Retained for the duration of the business relationship + 3 years.
+Financial records: 7 years as per regulatory requirements.
+Employee records: Duration of employment + 5 years.
+Data must be securely destroyed after the retention period using approved methods (cryptographic erasure or physical destruction).
+
+2.4 Data Transfer
+External data transfers must be approved through the Data Transfer Request form in ServiceNow.
+Only approved secure channels may be used: SFTP, company VPN, or the encrypted file sharing portal.
+USB drives are disabled on all company devices. Exceptions require CISO-signed authorization.
+Cloud storage uploads to non-approved services (personal Google Drive, Dropbox, etc.) are blocked by DLP.
+
+
+SECTION 3: INCIDENT REPORTING
+-------------------------------
+
+3.1 What Constitutes a Security Incident
+A security incident is any event that compromises the confidentiality, integrity, or availability of company data or systems. Examples include:
+- Unauthorized access to systems or data
+- Malware or ransomware infection
+- Phishing email clicked or credentials entered on a suspicious site
+- Lost or stolen company device (laptop, phone, USB)
+- Accidental data exposure (e.g., sending confidential data to the wrong recipient)
+- Suspicious login activity or account compromise
+- Physical security breach (e.g., tailgating, unauthorized visitor in restricted areas)
+
+3.2 Reporting Procedure
+All security incidents must be reported within 1 hour of discovery — no exceptions.
+Report via any of these channels:
+  - Email: security-incident@intelliguard-corp.com
+  - Phone: Security Operations Center (SOC) hotline: +1-800-SEC-OPS1
+  - Portal: ServiceNow > Security Incident > New Ticket
+  - Slack: #security-incidents channel (for initial notification only; formal ticket required)
+
+3.3 Incident Response Tiers
+Tier 1 (Low): Minor events with no data exposure (e.g., phishing email received but not clicked).
+  Response time: 24 hours. Handled by IT Help Desk.
+Tier 2 (Medium): Potential data exposure or system compromise (e.g., malware detected, suspicious login).
+  Response time: 4 hours. Handled by SOC team.
+Tier 3 (High): Confirmed data breach, ransomware, or active attacker in the network.
+  Response time: 1 hour. Full Incident Response Team activated, CISO notified immediately.
+Tier 4 (Critical): Large-scale breach affecting customer data, regulatory implications, or business continuity.
+  Response time: Immediate. Executive leadership, Legal, PR, and external forensics engaged.
+
+3.4 Employee Responsibilities During an Incident
+Do NOT attempt to investigate or remediate the incident yourself.
+Do NOT delete emails, files, or logs related to the incident — they are evidence.
+Do NOT discuss the incident on public channels or social media.
+Cooperate fully with the Incident Response Team and provide all requested information.
+If a device is compromised, disconnect it from the network immediately (unplug Ethernet, disable Wi-Fi).
+
+3.5 Post-Incident Review
+All Tier 2+ incidents undergo a Post-Incident Review (PIR) within 5 business days of resolution.
+The PIR identifies root cause, impact assessment, and corrective actions.
+Lessons learned are shared company-wide (sanitized) to improve security awareness.
+Repeat incidents of the same type trigger a mandatory process review by the CISO office.
+
+3.6 Whistleblower Protection
+Employees who report security incidents in good faith are protected from retaliation.
+Anonymous reporting is available through the Ethics Hotline: +1-800-ETHICS1.
+Retaliatory actions against incident reporters will result in disciplinary action up to termination.
