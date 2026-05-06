@@ -7,7 +7,7 @@ import re
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-BRAIN_PATH = r"c:\Users\SANAD\Downloads\models\new_Brain"
+BRAIN_PATH = "sarthak20P/IntelliGuard-Brain-v3"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Device: {device}")
 

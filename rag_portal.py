@@ -19,6 +19,9 @@ from styles import CUSTOM_CSS
 # ── Config ──────────────────────────────────────────────────────────────
 load_dotenv(Path(__file__).parent / ".env")
 
+LLM_MODE = os.getenv("LLM_MODE", "groq")
+AMD_ENDPOINT = os.getenv("AMD_ENDPOINT", "http://localhost:8000/v1")
+
 INTELLIGUARD_URL = "http://127.0.0.1:8000/scan"
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "your_key_here")
 GROQ_MODEL = "llama-3.3-70b-versatile"
@@ -107,22 +110,32 @@ def scan_query(text):
 
 
 def ask_llm(query, context_chunks):
-    if GROQ_API_KEY == "your_key_here":
-        return "⚠️ Groq API key not set. Add it to `.env`."
     context = "\n\n---\n\n".join(context_chunks)
+    system_prompt = (
+        "You are TechCorp's AI assistant. Answer using ONLY the provided context. "
+        "If the answer isn't in context, say so. Be concise and professional. Use bullet points."
+    )
+    messages = [
+        {"role": "user", "content": f"Context:\n{context}\n\n---\nQuestion: {query}"}
+    ]
     try:
-        client = Groq(api_key=GROQ_API_KEY)
-        r = client.chat.completions.create(
-            model=GROQ_MODEL,
-            messages=[
-                {"role": "system", "content": (
-                    "You are TechCorp's AI assistant. Answer using ONLY the provided context. "
-                    "If the answer isn't in context, say so. Be concise and professional. Use bullet points."
-                )},
-                {"role": "user", "content": f"Context:\n{context}\n\n---\nQuestion: {query}"},
-            ],
-            temperature=0.3, max_tokens=1024,
-        )
+        if LLM_MODE == "amd":
+            from openai import OpenAI
+            client = OpenAI(base_url=AMD_ENDPOINT, api_key="not-required")
+            r = client.chat.completions.create(
+                model="Qwen/Qwen2.5-7B-Instruct",
+                messages=[{"role": "system", "content": system_prompt}] + messages,
+                temperature=0.3,
+                max_tokens=1024,
+            )
+        else:
+            client = Groq(api_key=GROQ_API_KEY)
+            r = client.chat.completions.create(
+                model=GROQ_MODEL,
+                messages=[{"role": "system", "content": system_prompt}] + messages,
+                temperature=0.3,
+                max_tokens=1024,
+            )
         return r.choices[0].message.content
     except Exception as e:
         return f"⚠️ LLM Error: {e}"

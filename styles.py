@@ -438,14 +438,43 @@ html, body, [data-testid="stAppViewContainer"], [data-testid="stApp"] {
 }
 
 /* ═══════════════ CHAT INPUT ═══════════════ */
-[data-testid="stChatInput"] {
-    background: var(--bg-secondary) !important;
-    border: 1px solid var(--border-card) !important;
-    border-radius: 14px !important;
+/* ═══════════════ CHAT INPUT ═══════════════ */
+/* Fix invisible typed text in chat input */
+.stChatInput > div {
+    background-color: #1a2035 !important;
 }
-[data-testid="stChatInput"] textarea {
-    color: var(--text-primary) !important;
-    font-family: 'Inter', sans-serif !important;
+
+.stChatInput textarea, 
+.stChatInput input,
+[data-testid="stChatInput"] textarea,
+[data-testid="stChatInputTextArea"] {
+    color: #ffffff !important;
+    background-color: #1a2035 !important;
+    caret-color: #4f46e5 !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+[data-testid="stChatInput"] > div {
+    background-color: #1a2035 !important;
+    border: 1.5px solid #4f46e5 !important;
+    border-radius: 8px !important;
+}
+
+.stChatInput button {
+    background: #4f46e5 !important;
+    border: none !important;
+    border-radius: 6px !important;
+    color: white !important;
+}
+
+.stChatInput button:hover {
+    background: #4338ca !important;
+}
+
+.stChatInputContainer {
+    background-color: #0a0f1e !important;
+    border-top: 1px solid #1e2a45 !important;
+    padding: 12px 16px !important;
 }
 
 /* ═══════════════ METRICS OVERRIDE ═══════════════ */

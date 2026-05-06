@@ -35,7 +35,7 @@ from sklearn.metrics import (
 )
 
 # ─── CONFIG ───────────────────────────────────────────────────────────
-DATASET_PATH = r"c:\Users\SANAD\Downloads\augmented_dataset_v2.csv"
+DATASET_PATH = r"C:\Users\SANAD\IntelliGuard\datasets\intelliguard_brain_master_balanced.csv"
 BASE_MODEL   = "xlm-roberta-base"
 SAVE_DIR     = "models/brain_v2"
 OLD_BRAIN    = "models/brain"       # warm-start from previous checkpoint

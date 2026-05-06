@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore")
 
 # Define absolute paths
 SPINE_PATH = r"C:\Users\SANAD\makemore\models\spine"
-BRAIN_PATH = r"C:\Users\SANAD\Downloads\models\new_Brain"
+BRAIN_PATH = "sarthak20P/IntelliGuard-Brain-v3"
 JUDGE_PATH = r"C:\Users\SANAD\makemore\models\judge.pt"
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
