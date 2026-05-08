@@ -6,14 +6,14 @@ import torch.nn.functional as F
 from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from contextlib import asynccontextmanager
-import os, warnings
+import warnings
 
 warnings.filterwarnings("ignore")
 
 # Define absolute paths
 SPINE_PATH = "sarthak20P/IntelliGuard-SPINE"
 BRAIN_PATH = "sarthak20P/IntelliGuard-Brain-v3"
-JUDGE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "models", "judge", "judge.pt")
+JUDGE_PATH = "/workspace/models/judge.pt"
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
