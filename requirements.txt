@@ -1,3 +1,7 @@
-gradio
+streamlit
 requests
-pandas
+chromadb
+groq
+pypdf
+python-docx
+python-dotenv
