@@ -5,3 +5,4 @@ groq
 pypdf
 python-docx
 python-dotenv
+protobuf==3.20.3
