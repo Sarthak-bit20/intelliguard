@@ -402,6 +402,29 @@ header[data-testid="stHeader"] {
     color: #ef4444;
     font-family: 'Inter', sans-serif;
 }
+.threat-intent {
+    background: rgba(167, 139, 250, 0.08);
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    border-radius: 6px;
+    padding: 0.6rem;
+    margin: 0.8rem 0;
+    font-size: 0.74rem;
+    color: #a78bfa;
+    line-height: 1.4;
+}
+.obfuscation-tag {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+.metric-box.orange::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
 
 /* ══════════════════════════════════════
    STREAMLIT COMPONENT OVERRIDES

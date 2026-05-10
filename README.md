@@ -44,6 +44,39 @@ Instead of relying on a single, easily bypassed classifier, IntelliGuard forces 
 [EXECUTOR / AGENT] ——> Payload verified safe. Allowed to process.
 ```
 
+## Architecture Pipeline
+```mermaid
+graph TD
+A[👤 User Prompt / PDF Upload] --> B
+
+subgraph Edge Sentry
+B[🛡️ SPINE Layer: DistilBERT]
+end
+
+B -- Safe --> C[🧠 BRAIN Layer: XLM-RoBERTa]
+B -- Threat Detected --> Z[🛑 Blocked: Zero-Latency Drop]
+
+C -- Safe --> D[⚖️ RAG Judge & De-Framer]
+C -- Semantic Threat --> Y[🛑 Blocked: Intent Extracted]
+
+D -- Safe --> E[⚡ SECURE CORE: Qwen-7B/72B]
+D -- Embedded File Threat --> X[🛑 Blocked: Ingestion Halted]
+
+subgraph AMD Optimized Infrastructure
+E
+end
+
+E --> F[✅ Safe Enterprise Generation]
+
+classDef safe fill:#0b3d0b,stroke:#28a745,stroke-width:2px,color:#fff;
+classDef threat fill:#3d0b0b,stroke:#dc3545,stroke-width:2px,color:#fff;
+classDef core fill:#0b1e3d,stroke:#007bff,stroke-width:2px,color:#fff;
+
+class F safe;
+class X,Y,Z threat;
+class B,C,D,E core;
+```
+
 ## 📄 Technical Documentation
 Detailed mathematical specifications and architectural deep-dives can be found in the:
 [Technical Specification: IntelliGuard Detection Mathematics](./Technical%20Specification_%20IntelliGuard%20Detection%20Mathematics.pdf)

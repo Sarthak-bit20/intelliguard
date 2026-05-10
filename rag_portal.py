@@ -218,6 +218,7 @@ def deep_scan_document(paragraphs, filename, progress_container):
         score = result.get("score", 0)
         category = result.get("attack_category", "")
         details = result.get("details", {})
+        stripped = result.get("stripped_intent", "")
 
         scan_results.append({
             "chunk_idx": idx + 1,
@@ -227,6 +228,8 @@ def deep_scan_document(paragraphs, filename, progress_container):
             "category": category,
             "spine": details.get("spine_score", 0) or 0,
             "brain": details.get("brain_score", 0) or 0,
+            "intent_score": details.get("intent_score", 0) or 0,
+            "stripped_intent": stripped
         })
 
         log_audit(
@@ -384,7 +387,8 @@ with st.sidebar:
                     f"- **Category:** {t.get('category', 'PROMPT INJECTION')}\n"
                     f"- **Chunk:** {t['chunk_idx']} of {len(paragraphs)}\n"
                     f"- **Confidence:** {t['score']:.1%}\n"
-                    f"- **SPINE:** {t['spine']:.1%} · **BRAIN:** {t['brain']:.1%}\n\n"
+                    f"- **SPINE:** {t['spine']:.1%} · **BRAIN:** {t['brain']:.1%} · **DE-FRAMER:** {t.get('intent_score', 0):.1%}\n\n"
+                    f"**🔍 Stripped Intent:** `{t.get('stripped_intent', 'N/A')}`\n\n"
                     f"```\n{t['text_preview']}\n```\n\n"
                     f"File quarantined — **not** ingested into RAG."
                 )
@@ -438,63 +442,57 @@ st.markdown(f"""
         <div class="number">{accuracy:.0f}%</div>
         <div class="label">Safe Rate</div>
     </div>
+    <div class="metric-box orange">
+        <div class="number">Active</div>
+        <div class="label">De-framer</div>
+    </div>
 </div>
 """, unsafe_allow_html=True)
 
 
 # ── Chat history ────────────────────────────────────────────────────────
-st.markdown('<div class="chat-container">', unsafe_allow_html=True)
-for msg in st.session_state.chat_history:
-    if msg["role"] == "user":
-        st.markdown(f"""
-        <div class="msg-user">
-            <div>
-                <div class="msg-user-label">You</div>
-                <div class="msg-user-bubble">{html.escape(msg['content'])}</div>
-            </div>
-        </div>""", unsafe_allow_html=True)
+with st.container():
+    for msg in st.session_state.chat_history:
+        if msg["role"] == "user":
+            st.markdown(f'<div class="msg-user"><div><div class="msg-user-label">You</div><div class="msg-user-bubble">{html.escape(msg["content"])}</div></div></div>', unsafe_allow_html=True)
 
-    elif msg["role"] == "blocked":
-        score = msg.get("score", 0)
-        spine = msg.get("spine", 0)
-        brain = msg.get("brain", 0)
-        cat = html.escape(msg.get("category", "PROMPT INJECTION"))
-        st.markdown(f"""
-        <div class="threat-banner">
-            <div class="threat-title">🚨 THREAT BLOCKED</div>
-            <div class="threat-category">Attack Type: {cat}</div>
-            <div class="threat-msg">Prompt injection attempt detected and neutralized. This query has been logged for security review.</div>
-            <div class="threat-details">
-                <div class="threat-detail-item">
-                    <div class="tdl">Confidence</div>
-                    <div class="tdv">{score:.1%}</div>
-                </div>
-                <div class="threat-detail-item">
-                    <div class="tdl">SPINE Score</div>
-                    <div class="tdv">{spine:.1%}</div>
-                </div>
-                <div class="threat-detail-item">
-                    <div class="tdl">BRAIN Score</div>
-                    <div class="tdv">{brain:.1%}</div>
-                </div>
-            </div>
-        </div>""", unsafe_allow_html=True)
+        elif msg["role"] == "blocked":
+            score = msg.get("score", 0)
+            spine = msg.get("spine", 0)
+            brain = msg.get("brain", 0)
+            intent_score = msg.get("intent_score", 0)
+            # Clean up the stripped intent (remove markdown code blocks if Qwen added them)
+            clean_stripped = msg.get("stripped", "N/A")
+            if "```" in clean_stripped:
+                clean_stripped = clean_stripped.split("```")[-2] if len(clean_stripped.split("```")) > 2 else clean_stripped.replace("```", "")
+            clean_stripped = html.escape(clean_stripped.strip())
 
-    elif msg["role"] == "assistant":
-        content = html.escape(msg["content"])
-        sources_html = ""
-        if msg.get("sources"):
-            tags = "".join(f'<span>{html.escape(s)}</span>' for s in msg["sources"])
-            sources_html = f'<div class="msg-sources">📎 Sources: {tags}</div>'
-        st.markdown(f"""
-        <div class="msg-ai">
-            <div>
-                <div class="msg-ai-label">🤖 IntelliGuard AI</div>
-                <div class="msg-ai-bubble">{content}{sources_html}</div>
-            </div>
-        </div>""", unsafe_allow_html=True)
+            cat = html.escape(msg.get("category", "PROMPT INJECTION"))
+            obf_tag = f'<div class="obfuscation-tag">⚠️ Stylistic Obfuscation Detected</div>' if msg.get("is_obfuscated") else ""
+            
+            threat_html = f"""
+<div class="threat-banner">
+<div class="threat-title">🚨 THREAT BLOCKED</div>
+{obf_tag}
+<div class="threat-category">Attack Type: {cat}</div>
+<div class="threat-intent"><b>Stripped Intent:</b> {clean_stripped}</div>
+<div class="threat-msg">Prompt injection attempt detected and neutralized. This query has been logged for security review.</div>
+<div class="threat-details">
+<div class="threat-detail-item"><div class="tdl">Confidence</div><div class="tdv">{score:.1%}</div></div>
+<div class="threat-detail-item"><div class="tdl">SPINE</div><div class="tdv">{spine:.1%}</div></div>
+<div class="threat-detail-item"><div class="tdl">BRAIN</div><div class="tdv">{brain:.1%}</div></div>
+<div class="threat-detail-item"><div class="tdl">DE-FRAMER</div><div class="tdv">{intent_score:.1%}</div></div>
+</div>
+</div>"""
+            st.markdown(threat_html, unsafe_allow_html=True)
 
-st.markdown('</div>', unsafe_allow_html=True)
+        elif msg["role"] == "assistant":
+            content = html.escape(msg["content"])
+            sources_html = ""
+            if msg.get("sources"):
+                tags = "".join(f'<span>{html.escape(s)}</span>' for s in msg["sources"])
+                sources_html = f'<div class="msg-sources">📎 Sources: {tags}</div>'
+            st.markdown(f'<div class="msg-ai"><div><div class="msg-ai-label">🤖 IntelliGuard AI</div><div class="msg-ai-bubble">{content}{sources_html}</div></div></div>', unsafe_allow_html=True)
 
 
 # ── Chat input ──────────────────────────────────────────────────────────
@@ -512,13 +510,18 @@ if query:
     details = scan.get("details", {})
     spine = details.get("spine_score", 0) or 0
     brain = details.get("brain_score", 0) or 0
+    intent_score = details.get("intent_score", 0) or 0
+    stripped = scan.get("stripped_intent", "")
+    is_obf = scan.get("is_obfuscated", False)
+    
     log_audit(query, verdict, score, "chat", category)
 
     if verdict == "INJECTION":
         st.session_state.chat_history.append({
             "role": "blocked", "content": query,
             "score": score, "spine": spine, "brain": brain,
-            "category": category,
+            "intent_score": intent_score, "stripped": stripped,
+            "category": category, "is_obfuscated": is_obf
         })
     elif verdict == "ERROR":
         err = details.get("error", "Unknown")
